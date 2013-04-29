@@ -99,6 +99,19 @@ p.tagline {
   background-color: #fff;
 }
 
+
+.menu {
+  background: #222;
+  position: relative;
+  text-align: center;
+}
+
+.menu a {
+  margin-left: 2em;
+}
+
+
+
 .download-bar {
   background: #222;
   border: 5px solid #444;
