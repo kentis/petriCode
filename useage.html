@@ -8,8 +8,6 @@
 
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
   <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
 
   <title>PetriCode</title>
   <meta name="description" content="">
@@ -42,36 +40,39 @@
 	</div>
         </div>
         <article class="markdown-body">
-          <h3>Welcome to PetriCode web pages</h3>
+          <h3>Useage of PetriCode</h3>
 
-<p>PetriCode lets users generate code from <a href="http://www.cpntools.org">CPN models</a> annotated with <a href="#">pragmatics</a>.
-PetriCode allows the user to define code generation pragmatics and templates. However, templates for <a href="#">Groovy</a> are available with more to come
-as soon as I have a chance to write them.
+<p>petriCode [options] cpnmodel.cpn
 </p>
+<h4>Options</h4>
+ <pre class="nolines">
+ -a,--use-att                        Uses the ATT given as an argument and
+                                     bypasses deriving pragmatics and ATT
+                                     generation.
+ -b,--template-bindings <bindings>   specifies template bindigns
+ -c,--no-core-pragmatics             disables the default core proagmatics
+ -h,--help                           useage information
+    --no-constraint-checks           Turns off constraint checks on
+                                     pragmatics
+    --no-derived                     No derived pragmatics will be added
+ -o,--output-dir &lt;dir&gt;               The output directory (default: .)
+    --only-output-annotated-net      write the annotated net to the output
+                                     dir and exit
+    --only-output-att                Outputs the ATT as an xml document
+                                     and exit
+    --only-output-att-image          Outputs the ATT as an image
+    --output-annotated-net           write the annotated net to the output
+                                     dir
+    --output-att                     Outputs the ATT as an xml document
+    --output-att-image               Outputs the ATT as an image
+ -p,--pragmatics-specification       sets an additional set of pragmatics
+                                     for the model
+    --strict                         Forces stricter checks on pragmatic
+                                     constraints and bindings
 
-<p>
-PetriCode is not ment to be a full general purpose graphical programming language, rather a platform for makeing domain specific languages. Also, in recognision
-of the fact that no modelling-level language can ever be complete we provide the user with endless oppertunities to extend pragmatics and templates to
-fit individual projects.
-</p>
 
-	<h3>Quick overview</h3>
-	<p class="desc">The purpose of PetriCode is to transform annotated CPN models an annotated CPN model:</p>
-	<a href="images/sendersend.png"><img src="images/sendersend.png" class="illustration"> </img></a>
-	<p class="full">using the PetriCode Commandline Tool</p>  
-	<img src="images/run.png" class="illustration"> </img>
-	<p>To code</p>	<img src="images/dacode.png" class="illustration"> </img>
+</code>
 
-
-	<h3>Accnowledgements</h3>
-<p>The work on PetriCode has been supported by <a href="http://www.hib.no">Bergen University College</a>. <a href="http://www.dtu.dk">Technical University of Denmark</a>
-has contributed by allowing me to be enrolled in its PhD program.</p>
-
-<!-- <pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
---> 
 
         </article>
       </div>
