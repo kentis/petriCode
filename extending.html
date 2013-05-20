@@ -42,13 +42,37 @@
 	</div>
         </div>
         <article class="markdown-body">
-          <h3>Documentation</h3>
-		<ul>
-			<li><a href="useage.html">Useage</a></li>
-			<li><a href="extending.html">Extending PetriCode</a></li>
-		</ul>
+          <h3>Documentation -- Extending PetriCode</h3>
+		<p>PetriCode is extended, primarily, by adding new pragmatics
+	and correspoding code generation templates.</p>
+
+
+	<h3>Adding Pragmatics</h3>
+	<p>Adding pragmatics is done by creating a pragmatics descriptor in 
+	a file and giving it to the application using the -p option.</p>
+	
+	<p>The pragmatics descriptor file consists of none or more pragmatics 
+	descriptors. Each pragmatics descriptor begins with the name of the 
+	pragmatic described. Then comes a parentisis. Inside the parenthis comes
+	some comma-serated key-value paris on the form "key:value". Below 
+	is an example of a pragmatic decriptor for the "setLCV" pragmatic
+	that sets a LCV field value. The value of the origin field can be 
+	"explicit" or "derived". Pragmatic with the "explicit" origin should
+	be added by the modeller. Pragmatics with the "derived" origin can be
+	automatically derived using the value of the field derviationRules.</p> 
+	
+	<pre class="nolines">setLCV(origin: 'derived',derviationRules: 
+		['new PNPattern(adjacentPatterns: 
+		[new PNPattern(pragmatics: ["LCV"])])'] )</pre>
+
+	<h3>Adding Code Generation Templates</h3>
+
+	<p>
+
+	</p>
 
         </article>
+	
       </div>
     </div>
     <footer>
