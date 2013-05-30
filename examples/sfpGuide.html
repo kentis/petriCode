@@ -1,0 +1,91 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="../stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../javascripts/script.js"></script>
+
+  <title>PetriCode</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">PetriCode</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Code Generator for Colored Petri Nets Annotated With Pragmatics</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/kentis/nppn-cli/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/kentis/nppn-cli/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/kentis/nppn-cli" class="code">PetriCode on GitHub</a>
+        </div>
+	<div class="menu">
+		<a href="../examples.html">Examples</a>
+		<a href="../screens.html">Screens</a>
+		<a href="../documentation.html">Documentation</a>
+		<a href="../downloads.html">Downloads</a>
+		<a href="../publications.html">Publications</a>
+	</div>
+        </div>
+        <article class="markdown-body">
+          <h2>PetriCode examples -- Walkthrough</h2>
+		<p>On this page we will go through the process of using petriCode to use the model showin <a href="sfpModel.html">here</a> to produce the code that is shown
+		<a href="sfpCode.html">here</a>. Enjoy!</p>
+
+	<h3>The Pragmatics descriptors</h3>
+	
+	<p> For this example it is not stricly nessesary to add additional pragmatics descriptors since no extra derived pragmatics are defined. However, 
+		for the sake of comepleteness and to make sure we can use even use petriCode in strict mode we will make definitions for all the extra pragmatics.
+		To find out which pragmatics are not defined we first run the generation process in strict mode, so that it will fail and give appropriate messages if
+		some pragmatics are missing. Here is the result.
+	</p>
+
+	<img src="../images/strictRun.png" alt="Running petricode in strict mode reveals missing pragmatics descriptors."/>
+
+	<p>In order to ammend the core pragmatics we make a pragmatics description file with a pragmatic descriptor for each of the missing pragmatics. For simplisity we assume that all these pragmatics are explicit and do not need to be constrained. Then the descriptor for each consists of a name, a parenthesis with a map with a single key "origin" and the value "explicit". The file is calles sfp.prags.</p>
+	
+	<img src="../images/sfpPrags.png" />
+
+	<p>Now, all that remains is to run the generator. Luclily the pragmatics bindigs already contains bindings for all the pragmatics in this example so it does not need to be ammended. After running petriCode the files Sender.groovy and Reciever.groovy containing the code for the Sender and Reciever principals respectively.</p>
+
+	<img src="../images/finalRun.png" />
+
+		
+
+        </article>
+      </div>
+    </div>
+    <footer>
+<!--      <div class="owner">
+      <p><a href="https://github.com/kentis" class="avatar"><img src="https://secure.gravatar.com/avatar/963f5aed242329e47b036f51d20d679c?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/kentis">kentis</a> maintains <a href="https://github.com/kentis/nppn-cli">PetriCode</a></p>
+
+
+      </div> -->
+<!--      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div> -->
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/kentis/nppn-cli/tarball/master" class="tar">tar</a><a href="https://github.com/kentis/nppn-cli/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
