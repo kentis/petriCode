@@ -1,0 +1,9 @@
+%%VARS:__LOOP_VAR__%%
+//__LOOP_VAR__ = true
+do{
+	%%yield_declarations%%
+
+	%%yield%%
+	
+
+}while(<%if(binding.variables.containsKey("end_cond") && end_cond){%> $end_cond  <%}%>);

@@ -1,0 +1,22 @@
+<%import static org.k1s.petriCode.generation.CodeGenerator.removePrags%>
+
+package $name;
+
+import java.io.*;
+import java.net.*;
+import java.util.*; 
+public class ${name} {
+<%
+	if(binding.variables.containsKey('lcvs')){
+		for(lcv in lcvs){
+		%>public boolean ${removePrags(lcv.name.text)} ${lcv.initialMarking.asString() == '()' ? '= true' : ''};\n<%
+		}
+	}
+	if(binding.variables.containsKey('fields')){
+		for(field in fields){
+		%>Object ${removePrags(field.name.text)};<%
+		}
+	}
+	%>
+	%%yield%%
+}

@@ -1,0 +1,9 @@
+<%
+def getListValue = { param ->
+
+if(param.trim() == "[]") return "new ArrayList()"
+return param
+}
+%>
+${params[0]} = ${getListValue(params[1])};
+%%VARS:${params[0]}%%
