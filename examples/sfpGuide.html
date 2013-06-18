@@ -42,25 +42,25 @@
 	</div>
         </div>
         <article class="markdown-body">
-          <h2>PetriCode examples -- Walkthrough</h2>
-		<p>On this page we will go through the process of using petriCode to use the model showin <a href="sfpModel.html">here</a> to produce the code that is shown
+          <h2>PetriCode examples -- Walk-through</h2>
+		<p>On this page we will go through the process of using petriCode to use the model showing <a href="sfpModel.html">here</a> to produce the code that is shown
 		<a href="sfpCode.html">here</a>. Enjoy!</p>
 
 	<h3>The Pragmatics descriptors</h3>
 	
-	<p> For this example it is not stricly nessesary to add additional pragmatics descriptors since no extra derived pragmatics are defined. However, 
-		for the sake of comepleteness and to make sure we can use even use petriCode in strict mode we will make definitions for all the extra pragmatics.
+	<p> For this example it is not strictly necessary to add additional pragmatics descriptors since no extra derived pragmatics are defined. However, 
+		for the sake of completeness and to make sure we can use even use petriCode in strict mode we will make definitions for all the extra pragmatics.
 		To find out which pragmatics are not defined we first run the generation process in strict mode, so that it will fail and give appropriate messages if
 		some pragmatics are missing. Here is the result.
 	</p>
 
-	<img src="../images/strictRun.png" alt="Running petricode in strict mode reveals missing pragmatics descriptors."/>
+	<img src="../images/strictRun.png" alt="Running PetriCode in strict mode reveals missing pragmatics descriptors."/>
 
-	<p>In order to ammend the core pragmatics we make a pragmatics description file with a pragmatic descriptor for each of the missing pragmatics. For simplisity we assume that all these pragmatics are explicit and do not need to be constrained. Then the descriptor for each consists of a name, a parenthesis with a map with a single key "origin" and the value "explicit". The file is calles sfp.prags.</p>
+	<p>In order to amend the core pragmatics we make a pragmatics description file with a pragmatic descriptor for each of the missing pragmatics. For simplicity we assume that all these pragmatics are explicit and do not need to be constrained. Then the descriptor for each consists of a name, a parenthesis with a map with a single key "origin" and the value "explicit". The file is called sfp.prags.</p>
 	
 	<img src="../images/sfpPrags.png" />
 
-	<p>Now, all that remains is to run the generator. Luclily the pragmatics bindigs already contains bindings for all the pragmatics in this example so it does not need to be ammended. After running petriCode the files Sender.groovy and Reciever.groovy containing the code for the Sender and Reciever principals respectively.</p>
+	<p>Now, all that remains is to run the generator. Luckily the pragmatics bindings already contains bindings for all the pragmatics in this example so it does not need to be amended. After running petriCode the files Sender.groovy and Reciever.groovy containing the code for the Sender and Reciever principals respectively.</p>
 
 	<img src="../images/finalRun.png" />
 
